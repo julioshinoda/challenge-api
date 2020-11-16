@@ -1,0 +1,23 @@
+version: "3.1"
+services:
+  challenge-api:
+    container_name: api-challenge
+    env_file: 
+      - .env   
+    build: ./
+    ports:
+      - '9011:${PORT}'
+    volumes:
+      - ./:/go/src/github.com/julioshinoda/challenge-api
+    depends_on:
+      - db
+  db:
+    image: "postgres:latest"
+    environment:
+      - POSTGRES_USER=mshield
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_DB=challenge
+    ports:
+      - '5433:5432'
+    volumes:
+      - ./db/migrations/1605405479633_initial_schema.up.sql:/docker-entrypoint-initdb.d/init.sql  
