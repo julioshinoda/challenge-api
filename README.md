@@ -91,7 +91,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.fr
 Delete an expression saved before by create or update service.
 
 ```
-DELETE  http://localhost:9011/expressions/5
+DELETE  http://localhost:9011/expressions/1
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.frTc-4CSqX_UBTNcEug-94lqKq1ReG8ZcDG33WE1T8E
 
